@@ -7,5 +7,5 @@ uniform mat4 model;
 uniform mat4 model;
 
 int main(){
-		gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0f);
+		glPosition = vec4(aPos.x, aPos.y, aPos.z, 1.0f);
 }
