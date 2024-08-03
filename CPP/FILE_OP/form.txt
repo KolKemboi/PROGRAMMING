@@ -1,0 +1,11 @@
+#version 330 core
+
+layout (location = 0) in vec4 (1.0f, 1.0f, 1.0f, 1.0f);
+
+uniform mat4 model;
+uniform mat4 model;
+uniform mat4 model;
+
+int main(){
+		gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0f);
+}
