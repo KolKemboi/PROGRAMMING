@@ -26,7 +26,7 @@ namespace MAPS{
         int getSquare(int num)
         {
             return this->squares[num];
-        }
+       }
     private:
         std::unordered_map<int, int> squares;
 
