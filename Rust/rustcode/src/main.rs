@@ -44,13 +44,14 @@ fn main()
 
 }
 
-
+//struct data type
 struct User
 {
     usr_name: String,
     age: u32,
 }
 
+//struct implementation
 impl User 
 {
     fn describe(&self) -> String
@@ -60,7 +61,7 @@ impl User
     }
 }
 
-
+//error handling in rust
 fn error_handling(name_of_str: &mut String, times:usize) -> Result<String, &'static str>
 {
     println!("      Error handling");
@@ -72,7 +73,7 @@ fn error_handling(name_of_str: &mut String, times:usize) -> Result<String, &'sta
     return Ok(name_of_str.repeat((times)));
 }
 
-
+//the len function
 fn string_size(name_of_strng: &mut String) ->usize
 {   
     println!("      getting the length");
@@ -80,6 +81,7 @@ fn string_size(name_of_strng: &mut String) ->usize
 }
 
 
+//pushing 
 fn edit_string(name_of_str: &mut String)
 {
     println!("      String Editing");
