@@ -11,8 +11,24 @@ fn main() {
     let book = Book{title: &string1};
     book.print_title();
 
+    let mut another = Another{ another: &string1};
+    println!(" another      {}", another.do_self());
 
 }
+
+struct Another<'g> {
+    another: &'g str,
+}
+
+impl <'g, 'h> Another<'g>
+where 'g: 'h
+{
+    fn do_self(&self) -> &'h str
+    {
+        return  self.another;
+    }    
+}
+
 struct  Excerpt<'d> {
     part: &'d str,
 }
