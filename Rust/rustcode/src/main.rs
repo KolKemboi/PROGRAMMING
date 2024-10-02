@@ -26,7 +26,7 @@ fn main()
     let string_size = string_size(&mut name);
     println!("{}", string_size);
 
-    match error_handling(&mut name, 1) 
+    match error_handling(&mut name, 0) 
     {
         Ok(repeated)=>println!("{}", repeated),
         Err(e) => println!("Error: {}", e),
@@ -43,6 +43,9 @@ fn main()
 
 
 }
+
+
+
 
 //struct data type
 struct User
