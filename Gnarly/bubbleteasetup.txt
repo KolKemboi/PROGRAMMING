@@ -1,5 +1,6 @@
 mkdir my-bubbletea-app
 cd my-bubbletea-app
-go mod init github.com/yourusername/my-bubbletea-app
+go mod init my-bubbletea-app 
 go get github.com/charmbracelet/bubbletea
-
+go get github.com/charmbracelet/lipgloss
+go get github.com/charmbracelet/bubbles
