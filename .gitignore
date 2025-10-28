@@ -1,1 +1,114 @@
-*.exe
+# Compiled object files
+**/*.o
+**/*.obj
+
+# Precompiled headers
+**/*.gch
+**/*.pch
+
+# Compiled dynamic libraries
+**/*.so
+**/*.dylib
+**/*.dll
+
+# Compiled static libraries
+**/*.a
+**/*.lib
+**/*.la
+
+# Executables
+**/*.exe
+**/*.out
+**/*.app
+**/*.i*86
+**/*.x86_64
+**/*.hex
+
+# Debug files
+**/*.dSYM/
+**/*.su
+**/*.idb
+**/*.pdb
+
+# Build system directories
+**/build/
+**/bin/
+**/obj/
+**/out/
+**/CMakeFiles/
+**/Debug/
+**/Release/
+**/dist/
+**/generated/
+**/coverage/
+
+# CMake cache and generated files
+**/CMakeCache.txt
+**/cmake_install.cmake
+**/Makefile
+**/Makefile.*
+**/*.cmake
+
+# Autotools
+**/aclocal.m4
+**/autom4te.cache/
+**/compile
+**/config.guess
+**/config.log
+**/config.status
+**/config.sub
+**/configure
+**/depcomp
+**/install-sh
+**/ltmain.sh
+**/m4/
+**/missing
+
+# IDE and Editor specific
+# VSCode
+**/.vscode/
+# CLion / JetBrains
+**/.idea/
+# Eclipse
+**/.cproject
+**/.project
+**/.settings/
+# Code::Blocks
+**/*.cbp
+# Dev-C++
+**/*.layout
+# Visual Studio
+**/.vs/
+**/*.vcxproj*
+**/*.sln
+
+# Temporary files
+**/*~
+**/#*#
+**/.#*
+**/.DS_Store
+**/Thumbs.db
+**/*.swp
+**/*.swo
+**/*.bak
+**/*.tmp
+**/*.log
+
+# Test artifacts
+**/test-results/
+**/tests/tmp/
+**/*.gcda
+**/*.gcno
+**/*.gcov
+
+# Generated documentation
+**/docs/html/
+**/docs/latex/
+**/doxygen/
+
+# Package manager cache (if using vcpkg/conan)
+**/vcpkg_installed/
+**/conanbuildinfo.*
+**/conaninfo.txt
+**/conan.lock
+**/CMakeUserPresets.json
