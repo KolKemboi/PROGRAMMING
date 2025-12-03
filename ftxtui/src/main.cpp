@@ -1,4 +1,3 @@
-#include "ftxui/screen/color.hpp"
 #include <cstdint>
 #include <ftxui/component/component.hpp>
 #include <ftxui/component/screen_interactive.hpp>
@@ -30,8 +29,6 @@ int main() {
   uint32_t line_size = 1;
   uint32_t bottom_size = 5;
 
-  // int radiobox_selected = 0;
-  // std::vector<std::string> radiobox_entries = {"Choice_A"};
   const std::vector<std::string> menu_entries = {
       "Song 1", "Song 2", "Song 3", "Song 4", "Song 5",
       "Song 6", "Song 7", "Song 8", "Song 9", "Song 10",
@@ -39,10 +36,12 @@ int main() {
   int menu_selected = 0;
   auto menu = Menu(&menu_entries, &menu_selected);
   menu = Wrap("ITZY", menu);
-  // menu = FlexboxConfig::Wrap::Wrap("Menu", menu);
 
   int slider_value = 50;
   auto slider = Slider("Slider: ", &slider_value, 0, 100, 1);
+
+	int elapsed = 10;
+  auto currently_playing = Slider("Current Track: ", &elapsed, 0, 100, 1);
 
   std::string text_input = "";
   auto input = Input(&text_input, "Song Search");
@@ -74,10 +73,11 @@ int main() {
   });
 
   auto line_renderer = Renderer(line_container, [&] {
-    return dbox({// text("Line Container") | bold | center,
-                 // separator(),
-                 slider->Render(), 
-			text("ON TOP") | center});
+    return dbox({
+        // text("Line Container") | bold | center,
+        // separator(),
+        slider->Render(),
+    });
   });
 
   auto bottom_renderer = Renderer(bottom_container, [&] {
@@ -92,9 +92,9 @@ int main() {
     });
   });
   auto top_line_renderer = Renderer(top_line_container, [&] {
-    return vbox({
-        text("Current Track") | bold | center,
-    });
+    return dbox({// text("Line Container") | bold | center,
+                 // separator(),
+                 currently_playing->Render(), text("ON TOP") | center});
   });
 
   // CHANGE 1: Create ONE container that has ALL interactive components
