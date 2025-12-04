@@ -11,16 +11,11 @@
 using namespace ftxui;
 
 int main() {
-  auto screen = ScreenInteractive::Fullscreen();
   auto layout = Container::Vertical({});
 
-  auto layout_renderer = Renderer(layout, [&] {
-    return vbox({
-        text("Layout"),
-    });
-  });
+  auto screen = ScreenInteractive::Fullscreen();
 
-  auto component = CatchEvent(layout_renderer, [&](Event event) {
+  auto component = CatchEvent(layout, [&](Event event) {
     if (event == Event::Escape) {
       screen.Exit();
     }
